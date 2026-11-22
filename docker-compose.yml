@@ -3,5 +3,7 @@ services:
     build: .
     container_name: fibranet-landing
     restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
     ports:
       - "3005:80"
